@@ -22,7 +22,7 @@ lint: pyproject.lock
 .PHONY: type
 type: pyproject.lock
 	@echo "running type checker..."
-	poetry run python -m mypy .
+	poetry run python -m mypy . --check-untyped-defs
 
 .PHONY: check
 check:
